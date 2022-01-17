@@ -1,0 +1,17 @@
+char mystr[10] = "Hey";
+const int LED = 13;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LED, OUTPUT);
+}
+
+void loop()
+{
+  Serial.write(mystr,5);
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
+  delay(1000);
+}
